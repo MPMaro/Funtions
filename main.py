@@ -1,5 +1,5 @@
 
-# Global Vars
+# Global List
 test = [4, 7, 2, 5, 10]
 
 
@@ -17,8 +17,8 @@ def indexOf(aList, item):
     return -1
 
 def reverse(aList):
-  reverse = aList[::-1]
-  return reverse
+  rev = aList[::-1]
+  return rev
 
 def swap(aList, index1, index2):
   save = aList[index1]
@@ -27,29 +27,11 @@ def swap(aList, index1, index2):
   return aList
 
 def indexofmin(aList):
-  position = 0
+  minpos = 0
   for i in range(1, len(aList)):
-    if aList[i] < aList[position]:
-      position = i
-  return position
+    if aList[i] < aList[minpos]:
+      minpos = i
+  return minpos
 
 
-# Testing
 
-if contains(test, 7):
-  print("Number is in  list")
-else:
-  print("Number is not in the list")
-
-index = indexOf(test, 8)
-if index != -1:
-  print(f"8 IN list at {index}")
-else:
-  print("8 NOT in list")
-
-print(reverse(test))
-
-print(swap(test, 2, 4))
-
-print(indexofmin(test))
-    
